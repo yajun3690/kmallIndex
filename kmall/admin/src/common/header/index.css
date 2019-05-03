@@ -1,0 +1,32 @@
+.AdminHeader .logo{
+	color: #fff;
+    float: left;
+    font-size: 28px;
+    font-weight: 600;
+    width: 200px;
+}
+.AdminHeader .ant-dropdown-link{
+	float: right;
+}
+.AdminHeader .ant-dropdown-menu{
+	padding: 0 !important;
+}
+.ant-dropdown-menu{
+	padding: 31px 0;
+}
+.ant-dropdown-menu-item{
+	clear: both;
+    margin: 0;
+    padding: 0px 13px;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 3px;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.ant-dropdown-menu-item:hover{
+	background-color: transparent;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<%=require('html-loader!./common/meta.html') %>
+	<title><%=htmlWebpackPlugin.options.title %>-Kmall商城</title>
+</head>
+<body>
+	<%=require('html-loader!./common/nav.html') %>
+	<%=require('html-loader!./common/search.html') %>
+	<div class="focus">
+		<div class="container clearfix">
+			<ul class="keywords">
+			</ul>
+			<div class="swiper-container">			    
+			</div>			
+		</div>		
+	</div>
+	<div class="floor">
+		<div class="container">
+			<div class="floor-wrap">		
+			</div>
+		</div>
+	</div>	
+	<%=require('html-loader!./common/footer.html') %>
+</body>
+</html>

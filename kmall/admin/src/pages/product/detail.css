@@ -1,0 +1,12 @@
+.imgbox li{
+	float: left;
+	width: 100px;
+	height: 100px;
+	list-style: none;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+}
+.imgbox li img{
+	width: 100%;
+	height: 100%;
+}
