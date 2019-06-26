@@ -34,6 +34,9 @@ var _util = {
 	showSuccessMsg:function(msg){
 		alert(msg)
 	},
+	confirm:function(msg){
+		return window.confirm(msg)
+	},
 	goLogin:function(){
 		window.location.href = './user-login.html?redirect='+window.location.href
 	},

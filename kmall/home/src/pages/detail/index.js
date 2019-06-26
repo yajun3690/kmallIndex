@@ -5,6 +5,7 @@ require('util/pagination')
 require('./index.css')
 var _util = require('util')
 var _product = require('service/product')
+var _cart = require('service/cart')
 var tpl = require('./index.tpl')
 var page = {
 	params:{
@@ -42,6 +43,17 @@ var page = {
 			else if($this.hasClass('minus')){
 				$input.val(current-1 <= 1 ?1 :current-1 )
 			}
+		})
+		//添加购物车
+		this.$elem.on('click','.add-cart-btn',function(){
+			_cart.addCart({
+				productId:_this.params.productId,
+				count:$('.count-input').val()
+			},function(){
+				window.location.href = './result.html?type=addCart'
+			},function(msg){
+				_util.showErrorMsg(msg)
+			})
 		})
 	},
 	loadProductList:function(){

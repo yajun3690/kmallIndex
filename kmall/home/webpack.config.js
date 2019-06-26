@@ -29,6 +29,8 @@ module.exports = {
 		'user-update-password':'./src/pages/user-update-password/index.js',		
 		'list':'./src/pages/list/index.js',		
 		'detail':'./src/pages/detail/index.js',		
+		'cart':'./src/pages/cart/index.js',		
+		'order-confirm':'./src/pages/order-confirm/index.js',		
 		'result':'./src/pages/result/index.js',		
 	},
 	//单入口写法二
@@ -107,6 +109,8 @@ module.exports = {
 		new htmlWebpackPlugin(getHtmlConfig('user-center','用户中心')),
 		new htmlWebpackPlugin(getHtmlConfig('list','商品列表')),
 		new htmlWebpackPlugin(getHtmlConfig('detail','商品详情')),
+		new htmlWebpackPlugin(getHtmlConfig('cart','购物车')),
+		new htmlWebpackPlugin(getHtmlConfig('order-confirm','结算')),
 		new htmlWebpackPlugin(getHtmlConfig('result','结果提示')),
 		new htmlWebpackPlugin(getHtmlConfig('user-update-password','修改密码')),
 	    // new htmlWebpackPlugin({
@@ -132,7 +136,7 @@ module.exports = {
 		contentBase: './dist',//内容的目录
 		port:3002,//服务运行的端口
 		proxy: [{
-		  context: ['/user','/product'],
+		  context: ['/user','/product','/cart','/order','/shipping'],
 		  target: 'http://127.0.0.1:3000',
 		  // target: 'http://10.214.231.52:3000',
 		}]		
