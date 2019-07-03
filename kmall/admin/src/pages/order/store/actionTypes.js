@@ -1,5 +1,6 @@
 
-export const ADD_ITEM = 'todolist@add_item'
-export const CHANGE_ITEM = 'todolist@change_item'
-export const DEL_ITEM = 'todolist@del_item'
-export const LOAD_DATA = 'todolist@load_data'
+
+export const SET_PAGE = 'order@set_page'
+export const PAGE_REQUEST = 'order@page_request'
+export const PAGE_DONE = 'order@page_done'
+export const SET_ORDER_DETAIL = 'order@set_order_detail'

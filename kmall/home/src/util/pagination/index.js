@@ -20,7 +20,6 @@ var tpl = require('./index.tpl')
 			})
 		},
 		render:function(options){
-			console.log(options)
 			//计算总页数
 			var pages = Math.ceil(options.total/options.pageSize)
 			if(pages <=1){
@@ -50,9 +49,6 @@ var tpl = require('./index.tpl')
 				value:next,
 				disabled:next > pages ? true : false
 			})
-
-			console.log(pageArray)
-
 			var html = _util.render(tpl,{
 				pageArray:pageArray,
 				current:options.current,

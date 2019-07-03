@@ -1,23 +1,21 @@
-
-
 import React,{ Component } from 'react'
-
-import Layout from 'common/layout'
-
-
-import './index.css'
+import {Route,Switch} from "react-router-dom"
+import OrderDetail from './detail.js'
+import OrderList from './list.js'
 
 class Order extends Component{
     render(){
         return (
-        	<div className="Order">
-        		<Layout>
-        			欢迎进入订单管理!
-        		</Layout>
-        	</div>
+        	<Switch>
+        		<Route exact path='/order/detail/:orderNo?' component={OrderDetail} />
+        		<Route exact path='/order/' component={OrderList} />
+        	</Switch>
         )
     }
 }
 
 
 export default Order
+
+
+
