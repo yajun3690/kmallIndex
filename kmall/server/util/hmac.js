@@ -1,9 +1,3 @@
-/*
-* @Author: Tom
-* @Date:   2018-08-06 14:59:21
-* @Last Modified by:   Tom
-* @Last Modified time: 2018-08-06 15:13:26
-*/
 const crypto = require('crypto');
 
 // const hash = crypto.createHash('md5');

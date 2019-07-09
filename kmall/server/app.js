@@ -1,9 +1,3 @@
-/*
-* @Author: Tom
-* @Date:   2018-08-06 09:14:54
-* @Last Modified by:   Tom
-* @Last Modified time: 2019-04-15 10:13:22
-*/
 //项目入口文件
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -19,11 +13,11 @@ mongoose.connect('mongodb://localhost:27017/kmall',{ useNewUrlParser: true });
 const db = mongoose.connection;
 
 db.on('error',(err)=>{
-	throw err
+    throw err
 });
 
 db.once('open',()=>{
-	console.log('DB connected....');
+    console.log('DB connected....');
 });
 
 
@@ -31,11 +25,11 @@ const app = express();
 
 //跨域设置
 app.use((req,res,next)=>{
-	res.append("Access-Control-Allow-Origin","http://localhost:3001");
-	res.append("Access-Control-Allow-Credentials",true);
-	res.append("Access-Control-Allow-Methods","GET, POST, PUT,DELETE");
-	res.append("Access-Control-Allow-Headers", "Content-Type, X-Requested-With,X-File-Name"); 
-	next();
+    res.append("Access-Control-Allow-Origin","http://localhost:3001");
+    res.append("Access-Control-Allow-Credentials",true);
+    res.append("Access-Control-Allow-Methods","GET, POST, PUT,DELETE");
+    res.append("Access-Control-Allow-Headers", "Content-Type, X-Requested-With,X-File-Name"); 
+    next();
 })
 
 //配置静态资源
@@ -69,8 +63,8 @@ app.use(session({
 }))
 
 app.use((req,res,next)=>{
-	req.userInfo  = req.session.userInfo || {};
-	next();	
+    req.userInfo  = req.session.userInfo || {};
+    next(); 
 });
 
 //添加处理post请求的中间件
@@ -88,5 +82,5 @@ app.use("/order",require('./routes/order.js'));
 app.use("/payment",require('./routes/payment.js'));
 
 app.listen(3000,()=>{
-	console.log('server is running at 127.0.0.1:3000')
+    console.log('server is running at 127.0.0.1:3000')
 });

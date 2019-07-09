@@ -1,9 +1,3 @@
-/*
-* @Author: Tom
-* @Date:   2018-08-06 09:23:30
-* @Last Modified by:   TomChen
-* @Last Modified time: 2018-09-15 17:06:24
-*/
 const Router = require('express').Router;
 const OrderModel = require('../models/order.js');
 

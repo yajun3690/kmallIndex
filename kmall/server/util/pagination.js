@@ -1,12 +1,4 @@
 /*
-* @Author: TomChen
-* @Date:   2018-08-09 10:22:53
-* @Last Modified by:   TomChen
-* @Last Modified time: 2018-09-17 11:08:02
-*/
-
-
-/*
 options = {
 	page: //需要显示的页码
 	model: //操作的数据模型

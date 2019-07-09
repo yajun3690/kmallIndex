@@ -1,9 +1,3 @@
-/*
-* @Author: TomChen
-* @Date:   2018-08-09 10:22:53
-* @Last Modified by:   TomChen
-* @Last Modified time: 2018-08-14 11:19:20
-*/
 const CategoryModel = require('../models/category.js');
 const ArticleModel = require('../models/article.js');
 const path = require('path');

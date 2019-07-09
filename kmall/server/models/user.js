@@ -1,9 +1,3 @@
-/*
-* @Author: TomChen
-* @Date:   2018-08-04 17:14:00
-* @Last Modified by:   TomChen
-* @Last Modified time: 2018-09-15 09:31:22
-*/
 const mongoose = require('mongoose');
 const ProductModel = require('./product.js');
 const CartItemSchema = new mongoose.Schema({
